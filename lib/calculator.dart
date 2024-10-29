@@ -6,8 +6,10 @@ class CalculatorApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Calculator(),
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+        body: Calculator(),
+      ),
     );
   }
 }
@@ -46,33 +48,35 @@ class CalculatorState extends State<Calculator>{
  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue.shade200,
-      body: Column(
-        children: [
-          Container(
-            alignment: Alignment.bottomLeft,
-            padding: const EdgeInsets.all(35),
-            child: ElevatedButton(
+      appBar: AppBar(
+          title: const Text('Калькулятор'),
+          backgroundColor: Colors.blue.shade900,
+          actions: [
+            ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue.shade900,
               ),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Menu()),
+                  MaterialPageRoute(builder: (context) => MenuApp()),
                 );
               },
               child: const Text(
                 'Меню',
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 20,
                   color: Colors.white,
                 ),
               ),
             ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(20),
+          ],
+        ),
+      backgroundColor: Colors.blue.shade200,
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(40),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [

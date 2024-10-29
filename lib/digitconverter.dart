@@ -8,8 +8,28 @@ class DigitConverterApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          centerTitle: true,
-          title: const Text('Конвертер чисел'),
+          title: const Text('Конвертер систем счисления'),
+          backgroundColor: Colors.blue.shade900,
+          actions: [
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue.shade900,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuConverter()),
+                );
+              },
+              child: const Text(
+                'Меню',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
         ),
         body: DigitConverter(),
       ),
@@ -36,24 +56,6 @@ class DigitConverterState extends State<DigitConverter> {
       padding: const EdgeInsets.all(16.0),
       child: Column(
         children: [
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blue.shade900,
-            ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MenuConverterApp()),
-              );
-            },
-            child: const Text(
-              'Меню',
-              style: TextStyle(
-                fontSize: 30,
-                color: Colors.white,
-              ),
-            ),
-          ),
           TextField(
             decoration: const InputDecoration(labelText: 'Введите значение'),
             keyboardType: TextInputType.number,
