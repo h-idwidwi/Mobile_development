@@ -1,4 +1,4 @@
-#Tue Oct 29 12:27:46 YEKT 2024
+#Tue Oct 29 17:08:16 YEKT 2024
 base.0=C\:\\Users\\user\\Mobile_development\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\user\\Mobile_development\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\user\\Mobile_development\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex

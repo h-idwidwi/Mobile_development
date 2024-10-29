@@ -105,7 +105,6 @@ class CalculatorState extends State<Calculator>{
             child: Container(
               padding: const EdgeInsets.all(10),
               child: GridView.builder(
-                physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 4,
                   crossAxisSpacing: 4,

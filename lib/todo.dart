@@ -75,6 +75,7 @@ class TODOState extends State<TODO> {
           if (filteredTasks.isEmpty) {
             return Center(child: Text(
               'Нет запланированных задач',
+              textAlign: TextAlign.center,
               style: TextStyle(
                     fontSize: 30,
                   ),
