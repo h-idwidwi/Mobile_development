@@ -10,8 +10,10 @@ class MenuConverterApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MenuConverter(),
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+        body: Menu(),
+      ),
     );
   }
 }
@@ -21,34 +23,34 @@ class MenuConverter extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Меню конвертера'),
-        backgroundColor: Colors.blue.shade900,
-      ),
+          title: const Text('Конвертер'),
+          backgroundColor: Colors.blue.shade900,
+          actions: [
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue.shade900,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuApp()),
+                );
+              },
+              child: const Text(
+                'Меню',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              alignment: Alignment.bottomLeft,
-              padding: EdgeInsets.all(40),
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue.shade900,
-                    ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Menu()),
-                    );
-                  },
-                  child: const Text(
-                      'Меню',
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.white,
-                      ),
-                    ),
-              ),  
-            ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.blue.shade900),
               onPressed: () {
