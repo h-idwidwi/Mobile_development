@@ -14,6 +14,8 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 //Client ID: 5ff9dd2bab944b2cba9195c04736b0e2 Client Secret: f253c6bc2b9f44b98df371e986191c07
 
+//Client ID: 5ff9dd2bab944b2cba9195c04736b0e2 Client Secret: f253c6bc2b9f44b98df371e986191c07
+
 Future<void> main() async {
   try {
   WidgetsFlutterBinding.ensureInitialized();
