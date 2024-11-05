@@ -3,6 +3,8 @@ import 'package:math_expressions/math_expressions.dart';
 import 'package:mobile_development/main.dart';
 
 class CalculatorApp extends StatelessWidget{
+  const CalculatorApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context){
     return MaterialApp(
@@ -15,6 +17,8 @@ class CalculatorApp extends StatelessWidget{
 }
 
 class Calculator extends StatefulWidget{
+  const Calculator({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() => CalculatorState();
 }

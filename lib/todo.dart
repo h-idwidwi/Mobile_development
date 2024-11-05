@@ -3,6 +3,8 @@ import 'task_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 class TODOApp extends StatelessWidget {
+  const TODOApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,6 +15,8 @@ class TODOApp extends StatelessWidget {
 }
 
 class TODO extends StatefulWidget {
+  const TODO({Key? key}) : super(key: key);
+
   @override
   TODOState createState() => TODOState();
 }

@@ -6,8 +6,11 @@ import 'package:mobile_development/foodPages/food.dart';
 import 'package:mobile_development/foodPages/foodByCategories.dart';
 import 'package:mobile_development/foodPages/foodBySearch.dart';
 import 'package:mobile_development/foodPages/foodFavorites.dart';
+import 'package:mobile_development/main.dart';
 
 class foodCategoriesApp extends StatelessWidget {
+  const foodCategoriesApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,6 +22,8 @@ class foodCategoriesApp extends StatelessWidget {
 }
 
 class foodCategories extends StatefulWidget {
+  const foodCategories({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() => foodCategoriesState();
 }
@@ -31,10 +36,30 @@ class foodCategoriesState extends State<foodCategories> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Категории продуктов'),
         backgroundColor: Colors.blue.shade900,
         automaticallyImplyLeading: false,
         actions: [
+          Padding(
+            padding:EdgeInsets.fromLTRB(0, 0, 250, 0),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue.shade900,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MenuApp()),
+                );
+              },
+              child: const Text(
+                'Меню',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
           IconButton(
               icon: Icon(Icons.favorite_border_sharp),
               onPressed: () {

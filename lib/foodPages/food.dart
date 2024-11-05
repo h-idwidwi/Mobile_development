@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:math_expressions/math_expressions.dart';
 import 'package:mobile_development/foodPages/favorites_model.dart';
 import 'package:mobile_development/foodPages/foodCategories.dart';
-import 'package:mobile_development/todo.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'foodFavorites.dart';
 
 class FoodApp extends StatelessWidget {
+  const FoodApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,6 +19,8 @@ class FoodApp extends StatelessWidget {
 }
 
 class Food extends StatefulWidget {
+  const Food({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() => FoodState();
 }
@@ -132,15 +133,10 @@ class FoodState extends State<Food> {
                           ),
                         ],
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          addToFavorites(foods['id']);
-                        },
-                        child: SizedBox(
-                          width: 250,
-                          height: 150,
-                          child: Image.network(foods['photo']),
-                        ),
+                      SizedBox(
+                        width: 250,
+                        height: 150,
+                        child: Image.network(foods['photo']),
                       ),
                       Text(
                         foods['callories'] + ' ' + 'на 100 гр',

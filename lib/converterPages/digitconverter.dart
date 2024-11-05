@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'menuconverter.dart';
 
 class DigitConverterApp extends StatelessWidget {
+  const DigitConverterApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -38,6 +40,8 @@ class DigitConverterApp extends StatelessWidget {
 }
 
 class DigitConverter extends StatefulWidget {
+  const DigitConverter({Key? key}) : super(key: key);
+
   @override
   DigitConverterState createState() => DigitConverterState();
 }

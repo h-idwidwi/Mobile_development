@@ -7,6 +7,8 @@ import 'lengthconverter.dart';
 import '../main.dart';
 
 class MenuConverterApp extends StatelessWidget{
+  const MenuConverterApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context){
     return MaterialApp(
@@ -19,6 +21,8 @@ class MenuConverterApp extends StatelessWidget{
 }
 
 class MenuConverter extends StatelessWidget{
+  const MenuConverter({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

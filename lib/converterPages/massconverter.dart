@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'menuconverter.dart';
 
 class MassConverterApp extends StatelessWidget {
+  const MassConverterApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -38,6 +40,8 @@ class MassConverterApp extends StatelessWidget {
 }
 
 class MassConverter extends StatefulWidget {
+  const MassConverter({Key? key}) : super(key: key);
+
   @override
   MassConverterState createState() => MassConverterState();
 }
