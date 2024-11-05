@@ -11,4 +11,5 @@ C:/Users/user/Mobile_development/build/windows/x64/runner/Debug/data/flutter_ass
 C:/Users/user/Mobile_development/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES
 C:/Users/user/Mobile_development/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
 C:/Users/user/Mobile_development/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+C:/Users/user/Mobile_development/build/windows/x64/runner/Debug/data/flutter_assets/packages/plant_icons/fonts/PlantIcons.ttf
 C:/Users/user/Mobile_development/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag
