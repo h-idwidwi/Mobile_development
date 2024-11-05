@@ -119,15 +119,10 @@ class FoodByCategoriesState extends State<FoodByCategories> {
                           ),
                         ],
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          addToFavorites(foods['id']);
-                        },
-                        child: SizedBox(
-                          width: 250,
-                          height: 150,
-                          child: Image.network(foods['photo']),
-                        ),
+                      SizedBox(
+                        width: 250,
+                        height: 150,
+                        child: Image.network(foods['photo']),
                       ),
                       Text(
                         foods['callories'] + ' ' + 'на 100 гр',

@@ -3,6 +3,8 @@ import 'package:intl/intl.dart';
 import 'package:mobile_development/main.dart';
 
 class CalendarApp extends StatelessWidget {
+  const CalendarApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,6 +15,8 @@ class CalendarApp extends StatelessWidget {
 }
 
 class Calendar extends StatefulWidget {
+  const Calendar({Key? key}) : super(key: key);
+
   @override
   CalendarState createState() => CalendarState();
 }

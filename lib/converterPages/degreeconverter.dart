@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'menuconverter.dart';
 
 class DegreeConverterApp extends StatelessWidget {
+  const DegreeConverterApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -37,6 +39,8 @@ class DegreeConverterApp extends StatelessWidget {
   }
 }
 class DegreeConverter extends StatefulWidget {
+  const DegreeConverter({Key? key}) : super(key: key);
+
   @override
   DegreeConverterState createState() => DegreeConverterState();
 }

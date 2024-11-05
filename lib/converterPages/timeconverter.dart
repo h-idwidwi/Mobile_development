@@ -3,6 +3,8 @@ import 'package:mobile_development/converterPages/massconverter.dart';
 import 'menuconverter.dart';
 
 class TimeConverterApp extends StatelessWidget {
+  const TimeConverterApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -39,6 +41,8 @@ class TimeConverterApp extends StatelessWidget {
 }
 
 class TimeConverter extends StatefulWidget {
+  const TimeConverter({Key? key}) : super(key: key);
+
   @override
   TimeConverterState createState() => TimeConverterState();
 }

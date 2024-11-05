@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:mobile_development/foodPages/favorites_model.dart';
-import 'package:mobile_development/foodPages/food.dart';
 import 'package:mobile_development/foodPages/foodCategories.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class foodFavoritesApp extends StatelessWidget {
+  const foodFavoritesApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,6 +19,8 @@ class foodFavoritesApp extends StatelessWidget {
 }
 
 class foodFavorites extends StatefulWidget {
+  const foodFavorites({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() => foodFavoritesState();
 }
