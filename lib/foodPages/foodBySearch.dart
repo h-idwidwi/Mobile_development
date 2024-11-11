@@ -60,7 +60,10 @@ class FoodBySearchState extends State<FoodBySearch> {
             ),
           ),
           IconButton(
-            icon: Icon(Icons.favorite_outline_rounded),
+            icon: Icon(
+              Icons.favorite_outline_rounded,
+              color: Colors.blue.shade900,
+            ),
             onPressed: () {
               Navigator.push(
                 context, 
@@ -114,7 +117,10 @@ class FoodBySearchState extends State<FoodBySearch> {
                                 onPressed: () {
                                   addToFavorites(foods['id']);
                                 },
-                                icon: Icon(isFavorite ? Icons.favorite : Icons.favorite_border),
+                                icon: Icon(
+                                  isFavorite ? Icons.favorite : Icons.favorite_border,
+                                  color: Colors.blue.shade900,
+                                ),
                               );
                             },
                           ),

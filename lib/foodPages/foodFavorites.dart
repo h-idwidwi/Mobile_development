@@ -54,7 +54,7 @@ class foodFavoritesState extends State<foodFavorites> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Любимые продукты'),
+        title: Text('Любимые продукты', style: TextStyle(color: Colors.white),),
         backgroundColor: Colors.blue.shade900,
         automaticallyImplyLeading: false,
         actions: [
@@ -117,7 +117,10 @@ class foodFavoritesState extends State<foodFavorites> {
                               onPressed: () {
                                 deleteFromFavorites(food['id']);
                               },
-                              icon: Icon(isFavorite ? Icons.favorite : Icons.heart_broken_sharp),
+                              icon: Icon(
+                                isFavorite ? Icons.favorite : Icons.heart_broken_sharp,
+                                color: Colors.blue.shade900,
+                              ),
                             );
                           },
                         ),

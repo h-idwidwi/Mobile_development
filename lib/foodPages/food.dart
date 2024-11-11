@@ -30,7 +30,7 @@ class FoodState extends State<Food> {
 
   Future<List<Map<String, dynamic>>> fetchFood() async {
     await Supabase.instance.client.auth.signInWithPassword(email: 'hidwidwi@mail.ru', password: 'azUGyX278');
-    final response = await Supabase.instance.client.from('food').select();
+    final response = await Supabase.instance.client.from('food').select().order('category', ascending: true);
     return List<Map<String, dynamic>>.from(response);
   }
 
@@ -73,7 +73,10 @@ class FoodState extends State<Food> {
             ),
           ),
           IconButton(
-            icon: Icon(Icons.favorite_outline_rounded),
+            icon: Icon(
+              Icons.favorite_outline_rounded,
+              color: Colors.white,
+            ),
             onPressed: () {
               Navigator.push(
                 context, 
@@ -127,7 +130,10 @@ class FoodState extends State<Food> {
                                 onPressed: () {
                                   addToFavorites(foods['id']);
                                 },
-                                icon: Icon(isFavorite ? Icons.favorite : Icons.favorite_border),
+                                icon: Icon(
+                                  isFavorite ? Icons.favorite : Icons.favorite_border,
+                                  color: Colors.blue.shade900,
+                                ),
                               );
                             },
                           ),

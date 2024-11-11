@@ -61,7 +61,10 @@ class foodCategoriesState extends State<foodCategories> {
             ),
           ),
           IconButton(
-              icon: Icon(Icons.favorite_border_sharp),
+              icon: Icon(
+                Icons.favorite_border_sharp,
+                color: Colors.white,
+              ),
               onPressed: () {
                 Navigator.push(
                   context,

@@ -470,6 +470,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "pie_chart",
+      "rootUri": "file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/pie_chart-5.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "plant_icons",
       "rootUri": "file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/plant_icons-0.0.3",
       "packageUri": "lib/",
@@ -818,7 +824,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2024-11-04T13:12:08.536263Z",
+  "generated": "2024-11-06T09:40:30.536273Z",
   "generator": "pub",
   "generatorVersion": "3.5.4",
   "flutterRoot": "file:///C:/flutter",
