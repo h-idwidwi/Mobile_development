@@ -122,7 +122,10 @@ class NewsMainState extends State<NewsMain> {
             ),
           ),
           IconButton(
-            icon: Icon(Icons.punch_clock),
+            icon: Icon(
+              Icons.punch_clock,
+              color: Colors.white,
+            ),
             onPressed: () {
               Navigator.push(
                 context,
@@ -131,13 +134,19 @@ class NewsMainState extends State<NewsMain> {
             },
           ),
           IconButton(
-            icon: Icon(Icons.filter_alt_sharp),
+            icon: Icon(
+              Icons.filter_alt_sharp,
+              color: Colors.white,
+            ),
             onPressed: () {
               getFilters();
             },
           ),
           IconButton(
-            icon: Icon(Icons.sort),
+            icon: Icon(
+              Icons.sort,
+              color: Colors.white,
+            ),
             onPressed: () {
               setState(() {
                 ascending = !ascending;
@@ -235,10 +244,10 @@ class NewsMainState extends State<NewsMain> {
                 value: selectedCategory,
                 items: [
                   DropdownMenuItem(value: 1, child: Text("Спорт")),
-                  DropdownMenuItem(value: 2, child: Text("Шоу-бизнес")),
+                  DropdownMenuItem(value: 2, child: Text("Культура")),
                   DropdownMenuItem(value: 3, child: Text("Политика")),
                   DropdownMenuItem(value: 4, child: Text("Животные")),
-                  DropdownMenuItem(value: 5, child: Text("Культура")),
+                  DropdownMenuItem(value: 5, child: Text("Шоу-бизнес")),
                 ],
                 onChanged: (value) {
                   setState(() {

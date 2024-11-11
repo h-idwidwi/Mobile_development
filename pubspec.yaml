@@ -50,6 +50,7 @@ dependencies:
   supabase_flutter: ^2.0.0
   plant_icons: ^0.0.3
   video_player: ^2.9.2
+  pie_chart: any
 
 dev_dependencies:
   flutter_test:

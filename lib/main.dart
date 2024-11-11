@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_development/finance.dart';
 import 'package:mobile_development/calculator.dart';
 import 'package:mobile_development/calendar.dart';
 import 'package:mobile_development/foodPages/favorites_model.dart';
@@ -54,124 +55,137 @@ class Menu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Меню'),
+        title: Text('Меню', style: TextStyle(color: Colors.white),),
         backgroundColor: Colors.blue.shade900,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue.shade900),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Calculator()),
-                );
-              },
-              child: const Text(
-                  'Калькулятор',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.white,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: Icon(
+                    Icons.calculate,
+                    color: Colors.blue.shade900,
+                    size: 100,
                   ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Calculator()),
+                    );
+                  },
                 ),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue.shade900),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MenuConverter()),
-                );
-              },
-              child: const Text(
-                  'Конвертер',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.white,
+                IconButton(
+                  icon: Icon(
+                    Icons.change_circle,
+                    color: Colors.blue.shade900,
+                    size: 100,
                   ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MenuConverter()),
+                    );
+                  },
                 ),
+              ],
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue.shade900),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Calendar()),
-                );
-              },
-              child: const Text(
-                  'Календарь',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.white,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: Icon(
+                    Icons.calendar_month,
+                    color: Colors.blue.shade900,
+                    size: 100,
                   ),
-              ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Calendar()),
+                    );
+                  },
+                ),
+                IconButton(
+                  icon: Icon(
+                    Icons.task,
+                    color: Colors.blue.shade900,
+                    size: 100,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TODO()),
+                    );
+                  },
+                ),
+              ],
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue.shade900),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TODO()),
-                );
-              },
-              child: const Text(
-                  'TODO',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.white,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: Icon(
+                    Icons.cloud,
+                    color: Colors.blue.shade900,
+                    size: 100,
                   ),
-              ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => WeatherForecast()),
+                    );
+                  },
+                ),
+                IconButton(
+                  icon: Icon(
+                    Icons.food_bank,
+                    color: Colors.blue.shade900,
+                    size: 100,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => foodCategories()),
+                    );
+                  },
+                ),
+              ],
             ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue.shade900),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => WeatherForecast()),
-                );
-              },
-              child: const Text(
-                  'Прогноз погоды',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.white,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: Icon(
+                    Icons.newspaper,
+                    color: Colors.blue.shade900,
+                    size: 100,
                   ),
-              ),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue.shade900),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => foodCategories()),
-                );
-              },
-              child: const Text(
-                  'Справочник еды',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.white,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => NewsMain()),
+                    );
+                  },
+                ),
+                IconButton(
+                  icon: Icon(
+                    Icons.money_sharp,
+                    color: Colors.blue.shade900,
+                    size: 100,
                   ),
-              ),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue.shade900),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => NewsMain()),
-                );
-              },
-              child: const Text(
-                  'Новости',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.white,
-                  ),
-              ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Finance()),
+                    );
+                  },
+                ),
+              ],
             ),
           ],
         ),
